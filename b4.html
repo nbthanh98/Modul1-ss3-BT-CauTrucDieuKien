@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1 = parseFloat(prompt('number1 = '));
+        let number2 = parseFloat(prompt('number2 = '));
+        let number3 = parseFloat(prompt('number3 = ')); 
+
+        let max = number1;
+
+        if(max > number2 ){
+
+            if(max > number3){
+
+                max = number1;
+                alert(max);
+            }else{
+                max = number3;
+                alert(max);
+            }
+        }else{
+            max = number2
+            if(max > number3){
+                alert(max);
+            }else{
+                max = number3;
+                alert(max);
+            }
+        }
+
+    </script>
+</body>
+</html>

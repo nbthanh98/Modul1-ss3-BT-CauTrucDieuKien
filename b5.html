@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="diem-giua-ki">
+    <input type="text" name="" id="diem-cuoi-ki">
+    <button type="button" onclick="xepLoai()" >Click me!</button>
+    <div id = "result"></div>
+    <script>
+        
+        
+        function xepLoai(){
+            let diemGiuaKi = parseFloat(document.getElementById("diem-giua-ki").value);
+            let diemCuoiKi = parseFloat(document.getElementById("diem-cuoi-ki").value);
+    
+            let result = diemGiuaKi * 0.3 + diemCuoiKi * 0.7;
+            console.log(result);
+            let rank;
+            if( result >= 0 && result <= 3 ){
+                rank = 'Yeu!';
+            }else if( result > 3 && result <= 5){
+                rank = 'Trung Binh!';
+            }else if(result > 5 && result < 7){
+                rank = 'Kha';
+            }else if( result > 7){
+                rank = 'Gioi!';
+            }
+            console.log(rank);
+            document.getElementById('result').innerHTML = rank;
+        }
+    </script>
+</body>
+</html>
